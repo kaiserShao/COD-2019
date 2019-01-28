@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DE6207C8-B028-4073-86C2-8657963DA220}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>COD</RootNamespace>
+    <AssemblyName>COD</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DMSql, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DMSql.dll</HintPath>
+    </Reference>
+    <Reference Include="NModbus4">
+      <HintPath>..\packages\NModbus4.2.1.0\lib\net40\NModbus4.dll</HintPath>
+    </Reference>
+    <Reference Include="QuerySql, Version=1.0.2070.18012, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\QuerySql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cls_Main.cs" />
+    <Compile Include="CreateArrayList.cs" />
+    <Compile Include="frmHistroy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHistroy.Designer.cs">
+      <DependentUpon>frmHistroy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogic.Designer.cs">
+      <DependentUpon>frmLogic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Info.Designer.cs">
+      <DependentUpon>frm_Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Info_02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Info_02.Designer.cs">
+      <DependentUpon>frm_Info_02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Logic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Num.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Num.Designer.cs">
+      <DependentUpon>frm_Num.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\A-BIOS\BIOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logic\A-BIOS\Communication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logic\B-DEVICE\Device.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logic\C-APP\App.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTask.Designer.cs">
+      <DependentUpon>frmTask.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmHistroy.resx">
+      <DependentUpon>frmHistroy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogic.resx">
+      <DependentUpon>frmLogic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Info.resx">
+      <DependentUpon>frm_Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Info_02.resx">
+      <DependentUpon>frm_Info_02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Num.resx">
+      <DependentUpon>frm_Num.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTask.resx">
+      <DependentUpon>frmTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="bin\Debug\COD.exe.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gb02.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QD011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quxiao-04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qdrw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L08.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L09.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\J01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\J00.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tjrw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G08.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G09.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\03.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zt-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\J02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\min-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lsjl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back00.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bj2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\J03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\J04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\COD.exe" />
+    <Content Include="bin\Debug\COD.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
